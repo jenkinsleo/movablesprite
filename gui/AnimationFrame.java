@@ -278,6 +278,11 @@ public class AnimationFrame extends JFrame {
 				DisplayableSprite sprite = activeSprite;
 				if (sprite.getVisible()) {
 					if (sprite.getImage() != null) {
+						sprite.getMinX();
+						sprite.getMaxX();
+						sprite.getMinY();
+						sprite.getMaxY();
+						System.out.println(String.format("%5d; %5d;%5d;%5d;", translateX(sprite.getMinX()), translateY(sprite.getMinY()), scaleX(sprite.getWidth()), scaleY(sprite.getHeight())));						
 						g.drawImage(sprite.getImage(), translateX(sprite.getMinX()), translateY(sprite.getMinY()), scaleX(sprite.getWidth()), scaleY(sprite.getHeight()), null);
 					}
 					else {
@@ -295,6 +300,7 @@ public class AnimationFrame extends JFrame {
 		}
 		
 		private int scaleX(double x) {
+			System.out.println(scale);
 			return (int) Math.round(scale * x);
 		}
 		private int translateY(double y) {

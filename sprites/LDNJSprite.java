@@ -40,11 +40,11 @@ public class LDNJSprite implements DisplayableSprite, MovableSprite {
 	}
 
 	@Override
-	public void moveX(double pixelsPerSecond) {
+	public void setVelocityX(double pixelsPerSecond) {
 	}
 
 	@Override
-	public void moveY(double pixelsPerSecond) {
+	public void setVelocity(double pixelsPerSecond) {
 	}
 
 	@Override
@@ -122,7 +122,10 @@ public class LDNJSprite implements DisplayableSprite, MovableSprite {
 	@Override
 	public void update(Universe universe, KeyboardInput keyboard, long actual_delta_time) {
 		// TODO Auto-generated method stub
-		
+		//distance - velocity * time
+		//deltaX = ??
+		//deltaY = ??
+		this.centerX += deltaX;
 	}
 
 

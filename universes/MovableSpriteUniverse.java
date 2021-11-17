@@ -25,7 +25,7 @@ public class MovableSpriteUniverse implements Universe {
 }
 	
 	public double getScale() {
-		return 0;
+		return 1;
 	}
 
 	public double getXCenter() {
@@ -92,8 +92,8 @@ public class MovableSpriteUniverse implements Universe {
 			
 			if (sprite instanceof MovableSprite) {
 				MovableSprite movable = (MovableSprite)sprite;
-				movable.moveX(velocityX);
-				movable.moveY(velocityY);
+				movable.setVelocityX(velocityX);
+				movable.setVelocity(velocityY);
 			}
 			
 			sprite.update(this, keyboard, actual_delta_time);
